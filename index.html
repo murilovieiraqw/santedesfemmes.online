@@ -21,7 +21,6 @@
             background-color: #f8f8f8;
             margin: 0;
             padding: 0;
-            text-align: center;
         }
 
         .container {
@@ -61,67 +60,100 @@
             height: 100%;
         }
 
-        .imagem-destaque img {
-            max-width: 100%;
-            height: auto;
+        .imagem-destaque {
+            text-align: center;
             margin-top: 20px;
         }
 
-        .comentarios {
-            margin-top: 30px;
-            text-align: left;
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
+        .imagem-destaque img {
+            max-width: 100%;
+            height: auto;
         }
 
-        .comentario {
-            background: #f0f0f0;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
+        /* Estilos dos comentários */
+        .comentarios {
+            width: 50%;
+            margin: 40px 0 0 5%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .comment {
             display: flex;
             align-items: flex-start;
+            margin-bottom: 15px;
         }
 
-        .comentario img {
-            width: 40px;
-            height: 40px;
+        .comment img {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             margin-right: 10px;
         }
 
-        .comentario p {
-            margin: 0;
-            font-size: 14px;
+        .comment-content {
+            background: #f0f2f5;
+            padding: 10px;
+            border-radius: 12px;
+            max-width: 100%;
+            min-width: 250px;
         }
 
-        .botoes {
-            display: flex;
-            align-items: center;
-            margin-top: 5px;
+        .comment-content strong {
+            color: #365899;
         }
 
-        .botao {
+        .comment-actions {
             font-size: 12px;
-            color: #385898;
+            color: gray;
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .comment-actions span {
             cursor: pointer;
             margin-right: 10px;
         }
 
-        .botao:hover {
+        .comment-actions span:hover {
             text-decoration: underline;
         }
 
-        .respostas {
-            margin-left: 35px; /* Ajustado para ficar mais à esquerda, como no Facebook */
-            border-left: 2px solid #ddd;
-            padding-left: 10px;
+        .likes {
+            display: flex;
+            align-items: center;
         }
 
-        .tempo {
-            font-size: 12px;
-            color: #90949c;
+        .likes img {
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .footer a {
+            color: #365899;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -139,71 +171,77 @@
             </script>
         </div>
 
-        <!-- Imagem abaixo da VSL -->
+        <!-- Imagem abaixo da VSL (CENTRADA) -->
         <div class="imagem-destaque">
             <img src="faculdades.png" alt="Imagem de Faculdades">
         </div>
 
+        <!-- Bloco atualizado de comentários (ALINHADOS À ESQUERDA) -->
         <div class="comentarios">
-            <h2>Commentaires</h2>
+            <h3>23 de 174 commentaires</h3>
 
-            <div class="comentario">
-                <img src="mulher-01.png" alt="Usuário 1">
-                <div>
-                    <p><strong>Margaux Leclerc</strong></p>
-                    <p>Cette vidéo expliquant la recette étape par étape est très bien. J'ai déjà commencé à perdre du poids dès la première semaine !</p>
-                    <div class="botoes">
-                        <span class="botao">Curtir</span> · <span class="botao">Responder</span> · <span class="tempo">1h</span>
+            <div class="comment"><img src="mulher-01.png" alt="">
+                <div><div class="comment-content"><strong>Martine Dupont</strong>
+                    <p>Je n’aurais jamais imaginé qu’un ingrédient que j’avais déjà dans ma cuisine serait la clé pour enfin perdre du poids. Le meilleur ? Sans effort, sans sport, juste en suivant une recette simple ! J’ai perdu 8 kg en 3 semaines et je suis sous le choc !</p></div>
+                    <div class="comment-actions"><span>Curtir</span> · <span>Responder</span> · 4 min
+                        <div class="likes"><img src="curti.png" alt="Curtir"> 8</div>
                     </div>
                 </div>
             </div>
 
-            <div class="comentario">
-                <img src="mulher-02.png" alt="Usuário 2">
-                <div>
-                    <p><strong>Camille Rousseau</strong></p>
-                    <p>Quelqu'un a-t-il essayé et peut-il me dire si cela fonctionne ?</p>
-                    <div class="botoes">
-                        <span class="botao">Curtir</span> · <span class="botao">Responder</span> · <span class="tempo">2h</span>
-                    </div>
-                    <div class="respostas">
-                        <div class="comentario">
-                            <img src="mulher-03.png" alt="Usuário 3">
-                            <div>
-                                <p><strong>Sophie Morel</strong></p>
-                                <p>Je le fais tous les jours et je le recommande vivement ! J'ai déjà perdu 21 kilos en 11 jours.</p>
-                                <div class="botoes">
-                                    <span class="botao">Curtir</span> · <span class="botao">Responder</span> · <span class="tempo">2h</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="comentario">
-                            <img src="mulher-04.png" alt="Usuário 4">
-                            <div>
-                                <p><strong>Juliette Fontaine</strong></p>
-                                <p>J'ai également réalisé cette recette et je la recommande à toutes les femmes !</p>
-                                <div class="botoes">
-                                    <span class="botao">Curtir</span> · <span class="botao">Responder</span> · <span class="tempo">2h</span>
-                                </div>
-                            </div>
-                        </div>
+            <div class="comment"><img src="mulher-02.png" alt="">
+                <div><div class="comment-content"><strong>Sylvie Moreau</strong>
+                    <p>Tant de régimes compliqués et de salles de sport hors de prix… et tout ce que je devais faire, c'était mélanger quelques ingrédients simples et boire en quelques minutes par jour ! En 10 jours, mon ventre a dégonflé, et maintenant mes pantalons tombent tout seuls ! Ce truc est révolutionnaire !</p></div>
+                    <div class="comment-actions"><span>Curtir</span> · <span>Responder</span> · 5 min
+                        <div class="likes"><img src="curti.png" alt="Curtir"> 9</div>
                     </div>
                 </div>
             </div>
 
-            <div class="comentario">
-                <img src="mulher-05.png" alt="Usuário 5">
-                <div>
-                    <p><strong>Eloïse Laurent</strong></p>
-                    <p>Excellente vidéo, je vais le faire et je suis sûr que je ne le regretterai pas !</p>
-                    <div class="botoes">
-                        <span class="botao">Curtir</span> · <span class="botao">Responder</span> · <span class="tempo">3m</span>
+            <div class="comment"><img src="mulher-03.png" alt="">
+                <div><div class="comment-content"><strong>Isabelle Lefebvre</strong>
+                    <p>C'était tellement facile que j’avais du mal à y croire, mais j’ai suivi exactement ce que la vidéo expliquait et… BOOM ! Moins 6 kg en 12 jours</p></div>
+                    <div class="comment-actions"><span>Curtir</span> · <span>Responder</span> · 12 min
+                        <div class="likes"><img src="curti.png" alt="Curtir"> 11</div>
                     </div>
                 </div>
             </div>
 
+            <div class="comment"><img src="mulher-04.png" alt="">
+                <div><div class="comment-content"><strong>Catherine Laurent</strong>
+                    <p>"J’ai tout essayé, mais rien n’a jamais fonctionné aussi vite ! Ce truc active une substance dans le vinaigre de cidre qui fait que votre corps élimine la graisse automatiquement. Je fais juste la recette et le poids s’envole !</p></div>
+                    <div class="comment-actions"><span>Curtir</span> · <span>Responder</span> · 15 min
+                        <div class="likes"><img src="curti.png" alt="Curtir"> 15</div>
+                    </div>
+                </div>
+            </div>
+         <div class="comment"><img src="mulher-05.png" alt="">
+                <div><div class="comment-content"><strong>Dominique Fontaine</strong>
+                    <p>JJ’étais scotchée en voyant comment ce truc fonctionne. Il suffit de mélanger, boire et laisser la recette agir toute seule. Pas de régime, pas de sport… et j’ai déjà perdu 9 kg en 20 jours !</p></div>
+                    <div class="comment-actions"><span>Curtir</span> · <span>Responder</span> · 15 min
+                        <div class="likes"><img src="curti.png" alt="Curtir"> 15</div>
+                    </div>
+                </div>
+            </div>
+             <div class="comment"><img src="mulher-06.png" alt="">
+                <div><div class="comment-content"><strong>Chantal Bernard</strong>
+                    <p>Pour la première fois, je ne me sens pas esclave des régimes. Je fais juste cette petite préparation et je laisse mon corps travailler tout seul. Cela fait 3 semaines que j’ai commencé et mon corps est déjà méconnaissable !</p></div>
+                    <div class="comment-actions"><span>Curtir</span> · <span>Responder</span> · 15 min
+                        <div class="likes"><img src="curti.png" alt="Curtir"> 15</div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment"><img src="mulher-07.png" alt="">
+                <div><div class="comment-content"><strong>Françoise Pelletier</strong>
+                    <p>J’ai toujours cru qu’il fallait souffrir à la salle de sport pour maigrir… mais ça, c’est complètement différent ! J’ai simplement suivi ce que la vidéo expliquait et j’ai perdu 11 kg en 1 mois, sans rien changer à ma routine !</p></div>
+                    <div class="comment-actions"><span>Curtir</span> · <span>Responder</span> · 15 min
+                        <div class="likes"><img src="curti.png" alt="Curtir"> 15</div>
+        <!-- Rodapé -->
+        <div class="footer">Copyright 2025 – Conteúdo Exclusivo ®<br>
+            Tous droits réservés.<br>
+            <a href="#">Conditions d'utilisation</a> – <a href="#">Politique de confidentialité</a>
         </div>
+
     </div>
 
 </body>
