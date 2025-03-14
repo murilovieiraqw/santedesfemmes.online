@@ -1,0 +1,97 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título Principal */
+h1 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo */
+h2 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Estilo do Vídeo */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Botão de Chamada para Ação */
+.botao {
+    background: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Seção de Comentários */
+.comentarios {
+    text-align: left;
+}
+
+.comentarios h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.comentario {
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.comentario img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comentario p {
+    font-size: 14px;
+    flex: 1;
+}
+
+.likes {
+    font-size: 14px;
+    color: #888;
+}
