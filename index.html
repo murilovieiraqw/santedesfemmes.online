@@ -159,29 +159,36 @@
             text-decoration: underline;
         }
     </style>
-    <script>
+  <script>
     (function() {
         var backRedirectUrl = "https://www.bienvivre.online/BACK"; // URL do BackRedirect
 
+        // Impede que o usuário saia ao clicar no botão de voltar do navegador
         window.onload = function() {
             history.pushState(null, null, location.href);
-            window.onpopstate = function() {
+            window.onpopstate = function(event) {
+                history.pushState(null, null, location.href);
                 location.href = backRedirectUrl;
             };
         };
 
+        // Impede que o usuário saia ao tentar fechar a aba ou a janela
+        window.addEventListener("beforeunload", function(event) {
+            event.preventDefault();
+            event.returnValue = "";
+            setTimeout(function() {
+                location.href = backRedirectUrl;
+            }, 50);
+        });
+
+        // Impede que o usuário saia ao pressionar a tecla "Backspace" ou tentar fechar no mobile
         document.addEventListener("keydown", function(event) {
-            if (event.key === "Backspace" || event.key === "Escape") {
+            if (event.key === "Backspace") {
                 event.preventDefault();
                 location.href = backRedirectUrl;
             }
         });
 
-        document.addEventListener("visibilitychange", function() {
-            if (document.visibilityState === "hidden") {
-                location.href = backRedirectUrl;
-            }
-        });
     })();
 </script>
 
