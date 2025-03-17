@@ -44,22 +44,17 @@
             color: red;
         }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-        }
-
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Ajuste conforme necessário */
-    height: auto; /* Ajuste automático do tamanho do vídeo */
-    margin: 0 auto;
+    max-width: 800px;
+    height: auto; /* Garante ajuste automático */
+    margin: 0 auto; /* Centraliza */
     background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
         .imagem-destaque {
@@ -200,14 +195,14 @@
 <div class="espaco-headline"></div>
 
 <!-- Vídeo de vendas -->
-<div class="video-container" id="videoContainer"></div>
-
-<script type="text/javascript">
-    var s = document.createElement("script");
-    s.src = "https://scripts.converteai.net/e98b9cb9-54cb-41de-aefd-9de32c7a1909/ab-test/67d239eda77f2392a30214d2/player.js";
-    s.async = true;
-    document.getElementById("videoContainer").appendChild(s);
-</script>
+<div class="video-container">
+    <script type="text/javascript">
+        var s = document.createElement("script");
+        s.src = "https://scripts.converteai.net/e98b9cb9-54cb-41de-aefd-9de32c7a1909/ab-test/67d239eda77f2392a30214d2/player.js";
+        s.async = true;
+        document.getElementById("videoContainer").appendChild(s);
+    </script>
+</div>
     
 </div>
 
