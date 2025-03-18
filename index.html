@@ -44,29 +44,23 @@
             color: red;
         }
 
-.espaco-vsl {
-    height: 5px; /* Antes estava 50px, reduzi para 5px */
+.espaco-headline {
+    display: block;
     width: 100%;
+    height: 50px; /* Ajuste conforme necessário */
+    background-color: white; /* Garante que o espaço seja visível */
 }
+
 .video-container {
     position: relative;
     width: 100%;
     max-width: 800px;
-    height: 0;
-    padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
-    background: transparent; /* Antes estava preto (#000), alterei para transparente */
-
+    height: auto;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.video-container iframe, 
-.video-container #converteai-player {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 
         .imagem-destaque {
             text-align: center;
@@ -165,16 +159,6 @@
         .footer a:hover {
             text-decoration: underline;
         }
-        .headline {
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    max-width: 800px;
-    margin: 5px auto; /* Diminui o espaço entre o topo da página e a headline */
-    padding: 5px;
-    line-height: 1.4;
-}
-
     </style>
    <script>
     (function() {
@@ -212,14 +196,18 @@
 </head>
 <body>
 
-<!-- Espaço reservado para garantir o posicionamento correto da VSL -->
-<div class="espaco-vsl"></div>
+<!-- Espaço reservado para a headline removida -->
+<div class="espaco-headline"></div>
 
-<!-- ✅ CORREÇÃO DA VSL -->
+<!-- Vídeo de vendas -->
 <div class="video-container">
-    <div id="converteai-player"></div>
+    <script type="text/javascript" id="scr_67d239eda77f2392a30214d2">
+        var s = document.createElement("script");
+        s.src = "https://scripts.converteai.net/e98b9cb9-54cb-41de-aefd-9de32c7a1909/ab-test/67d239eda77f2392a30214d2/player.js";
+        s.async = true;
+        document.body.appendChild(s);
+    </script>
 </div>
-
 
 </script>
 
