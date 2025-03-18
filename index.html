@@ -44,13 +44,18 @@
             color: red;
         }
 
-       .video-container {
+.vsl-space {
+    height: 50px; /* Ajuste esse valor para mais ou menos espaço */
+    width: 100%;
+}
+
+.video-container {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Ajuste conforme necessário */
+    max-width: 800px;
     height: 0;
     padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
-    background: #000; /* Fundo preto para evitar espaços vazios */
+    background: #000;
 }
 
 .video-container iframe, 
@@ -60,8 +65,8 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
 
-        }
 
         .imagem-destaque {
             text-align: center;
@@ -208,8 +213,13 @@
     
 </head>
 <body>
+<!-- Espaço extra para garantir que a VSL fique um pouco mais abaixo -->
+<div class="vsl-space"></div>
 
-       <div class="headline-space"></div>
+<!-- VIDEO DE VENDAS -->
+<div class="video-container">
+    <div id="converteai-player"></div>
+</div>
 
 <div class="video-container">
     <div id="converteai-player"></div>
